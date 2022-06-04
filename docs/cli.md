@@ -127,11 +127,13 @@ poetry install --remove-untracked
 ```
 
 You can also specify the extras you want installed
-by passing the `-E|--extras` option (See [Extras]({{< relref "pyproject#extras" >}}) for more info)
+by passing the `-E|--extras` option (See [Extras]({{< relref "pyproject#extras" >}}) for more info).
+Pass `--all-extras` to install all defined extras for a project.
 
 ```bash
 poetry install --extras "mysql pgsql"
 poetry install -E mysql -E pgsql
+poetry install --all-extras
 ```
 
 By default `poetry` will install your project's package everytime you run `install`:
@@ -156,6 +158,7 @@ poetry install --no-root
 * `--no-dev`: Do not install dev dependencies.
 * `--no-root`: Do not install the root package (your project).
 * `--extras (-E)`: Features to install (multiple values allowed).
+* `--all-extras`: Install all extra features (conflicts with --extras).
 
 ## update
 

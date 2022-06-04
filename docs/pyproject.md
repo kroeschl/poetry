@@ -257,6 +257,12 @@ poetry install --extras "mysql pgsql"
 poetry install -E mysql -E pgsql
 ```
 
+Or, you can install all extras with the `--all-extras` option:
+
+```bash
+poetry install --all-extras
+```
+
 ## `plugins`
 
 Poetry supports arbitrary plugins which work similarly to
